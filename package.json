@@ -1,0 +1,24 @@
+{
+  "name": "ottisk-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Шаблон курса «Агенты и LLM-разработка: типография «Оттиск»»: то, что в проверках идёт на Болванке, здесь идёт на настоящей модели",
+  "engines": {
+    "node": ">=22.19"
+  },
+  "scripts": {
+    "hello": "tsx src/hello.ts",
+    "litera:train": "tsx litera/train.ts",
+    "litera:sample": "tsx litera/sample.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "openai": "7.38.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}
