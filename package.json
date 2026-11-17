@@ -9,16 +9,27 @@
   },
   "scripts": {
     "hello": "tsx src/hello.ts",
+    "priemka": "tsx priemka/run.ts",
     "litera:train": "tsx litera/train.ts",
     "litera:sample": "tsx litera/sample.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint .",
+    "effect:diagnostics": "effect-language-service diagnostics --project tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "pnpm typecheck && pnpm lint && pnpm effect:diagnostics && pnpm test"
   },
   "dependencies": {
-    "openai": "7.38.0"
+    "effect": "4.1.0",
+    "openai": "7.38.0",
+    "zod": "4.6.7"
   },
   "devDependencies": {
+    "@effect/language-service": "0.87.5",
     "@types/node": "^24.0.0",
+    "oxlint": "^1.0.0",
     "tsx": "^4.21.0",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.0"
   }
 }
